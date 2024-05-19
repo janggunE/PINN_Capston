@@ -213,10 +213,10 @@ losshistory, train_state = model.train(epochs = 10000, display_every = 100)
 #dde.saveplot(losshistory, train_state, issave =True, isplot = True)
 
 
-dde.optimizers.config.set_LBFGS_options(maxcor=100, ftol=0, gtol=1e-08, maxiter=20000, maxfun=None, maxls=50)
-model.compile("L-BFGS-B", loss_weights = [1, 1, 1, 1, 1, 1, 1, 9, 1,1])
+dde.optimizers.config.set_LBFGS_options(maxcor=100, ftol=0, gtol=1e-08, maxiter=50000, maxfun=None, maxls=50)
+model.compile("L-BFGS-B", loss_weights = [1, 1, 1, 1, 1, 1, 1, 3, 2,2])
 
-losshistory, train_state = model.train(display_every = 100, model_save_path = './0424')
+losshistory, train_state = model.train(display_every = 100, model_save_path = './0516/0516')
 
 dde.saveplot(losshistory, train_state, issave = True, isplot = True)
 
